@@ -1,116 +1,119 @@
-Boston House Pricing: Multivariable Regression & Valuation Model
-📌 Project Overview
+# Boston House Pricing: Multivariable Regression & Valuation Model
+## 📌 **Project Overview**
 
 This project applies multivariable linear regression to predict median house prices in Boston suburbs using multiple housing market and environmental variables.
 It demonstrates the end-to-end data science workflow, including data preprocessing, exploratory data analysis (EDA), feature engineering, model training, evaluation, and visualization.
 
-🎯 Problem Statement
+## 🎯 **Problem Statement**
 
 Real estate pricing is influenced by multiple socio-economic and geographic factors.
+
 The goal of this project is to:
 
-Understand the key drivers of Boston housing prices
+* Understand the key drivers of Boston housing prices
 
-Build a regression model that can predict house values
+* Build a regression model that can predict house values
 
-Provide insights that can guide property valuation and investment decisions
+* Provide insights that can guide property valuation and investment decisions
 
-📂 Dataset
+## 📂 **Dataset**
 
-Source: Boston Housing Dataset (scikit-learn)
+**Source**: Boston Housing Dataset (scikit-learn)
 
-Instances: 506
+**Instances**: 506
 
-Features: 13 numerical features (e.g., average number of rooms, crime rate, proximity to employment centers)
+**Features**: 13 numerical features (e.g., average number of rooms, crime rate, proximity to employment centers)
 
-Target Variable: Median value of owner-occupied homes (MEDV) in $1000's
+**Target Variable**: Median value of owner-occupied homes (MEDV) in $1000's
 
-🛠 Tech Stack
+## 🛠 **Tech Stack**
 
 Python (3.14)
 
-Libraries:
+**Libraries**:
 
-Data Analysis: Pandas, numpy
-
-Visualization: Matplotlib, Seaborn, Plotly
-
-Modeling: Scikit-Learn
-
+* Data Analysis: Pandas, numpy
+  
+* Visualization: Matplotlib, Seaborn, Plotly
+	  
+* Modeling: Scikit-Learn
+	  
 Jupyter Notebook for development & documentation
 
-📊 Project Workflow
+## 📊 **Project Workflow**
 
-Data Loading & Cleaning
+### Data Loading & Cleaning
 
-Loaded dataset from sklearn.datasets
+* Loaded dataset from sklearn.datasets
 
-Checked for null values and data types
+* Checked for null values and data types
 
-Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis (EDA)
 
-Visualized distributions and correlations
+* Visualized distributions and correlations
 
-Identified most influential features
+* Identified most influential features
 
-Feature Engineering
+### Feature Engineering
 
-Normalized/standardized numerical features
+* Normalized/standardized numerical features
 
-Checked multicollinearity
+* Checked multicollinearity
 
-Applied **logarithmic transformation to the target variable** (MEDV) to reduce heteroscedasticity and improve model performance
+* Applied **logarithmic transformation to the target variable** (MEDV) to reduce heteroscedasticity and improve model performance
 
-Model Training
+### Model Training
 
-Applied Multiple Linear Regression
+* Split dataset into training and test sets
 
-Split dataset into training and test sets
+* Trained the Multiple Linear Regression model using training data
 
-Model Evaluation
+* Made model predictions using the testing set
 
-Evaluated performance using R² and residual plots
+### Model Evaluation
 
-Applying a log transform on target variable (MEDV) significantly improved model fit and error distribution
+* Evaluated performance using R², MAE, MSE and RSME metrics along with residual plots
 
-Visualization
+* Applying a log transform on target variable (MEDV) and re-training the model again with the transformed target variable significantly improved model fit and error distribution
 
-Scatter plots of predicted vs. actual values
+### Visualization
 
-Residual analysis
+* Scatter plots of predicted vs. actual values
 
-📈 Key Insights
+* Residual analysis
 
-Top Predictors:
+## 📈 **Key Insights**
 
-Average number of rooms per dwelling (RM)
+### Top Predictors:
 
-Lower crime rate (CRIM)
+* Average number of rooms per dwelling (RM)
 
-Proximity to employment centers (DIS)
+* Lower crime rate (CRIM)
 
-Model Performance:
+* Proximity to employment centers (DIS)
 
-R² Score before transform: 0.750 (Training), 0.671 (Test)
+### Model Performance:
 
-R² Score after transform: 0.793 (Training), 0.745 (Test)
+* R² Score before transform: 0.750 (Training), 0.671 (Test)
 
-MAE before transform: 4.06
+* R² Score after transform: 0.793 (Training), 0.745 (Test)
 
-MAE after transform: 3.480
+* MAE before transform: 4.06
 
-MSE before transform: 34.414
+* MAE after transform: 3.480
 
-MSE after transform: 28.218
+* MSE before transform: 34.414
 
-RMSE before transform: 5866.342
+* MSE after transform: 28.218
 
-RMSE after transform: 5312.049
+* RMSE before transform: $5866.342
 
-Interpretation:
+* RMSE after transform: $5312.049
 
-Applying the **log transform** on MEDV significantly improved model fit and error distribution
+### Interpretation:
 
-Houses with more rooms and located in low-crime areas tend to have higher prices
+- Applying the **log transform** on MEDV significantly improved model fit and error distribution
 
-Accessibility to job hubs is a significant factor
+- Houses with more rooms and located in low-crime areas tend to have higher prices
+
+- Accessibility to job hubs is a significant factor
